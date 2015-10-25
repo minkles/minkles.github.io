@@ -77,8 +77,8 @@
 <p class="p5">modelFit &lt;- train(wleTrain$classe ~ .,method="rf",preProcess="pca",data=wleTrain)</p>
 <p class="p7"><br></p>
 <p class="p3">##Cross validation</p>
-<p class="p3">I chose to cross-validate using k-folds to ensure the model was not being overfitted. In my original cross-validation, I created 10 folds and found an average error rate of 1.7888%. However, due to the slow processing speed of random forests, for this writeup I will recreate the validation using only 5 folds. As you can see, the error rate is similar to the one I originally calculated.</p>
-<p class="p3">I expect my out-of-sample error rate to be close to 1.7888%.</p>
+<p class="p3">I chose to cross-validate using k-folds to ensure the model was not being overfitted. I created 5 folds and found an average error rate of 2.0181%.<span class="Apple-converted-space"> </span></p>
+<p class="p3">I expect my out-of-sample error rate to be close to 2.0181%.</p>
 <p class="p5">folds &lt;- createFolds(y=wleTrain$classe,k=5,list=TRUE,returnTrain=TRUE)</p>
 <p class="p5">kerrors &lt;- vector()</p>
 <p class="p5">for (i in 1:length(folds)) {</p>
